@@ -1,7 +1,9 @@
 import ch1_3_stack_queue_bags.creative_problems.Deque;
+import ch1_3_stack_queue_bags.creative_problems.GeneralizedQueue;
 import ch1_3_stack_queue_bags.creative_problems.RandomQueue;
 import ch1_3_stack_queue_bags.mQueue;
 import ch1_3_stack_queue_bags.mStack;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -145,5 +147,27 @@ public class ch1_3Test {
         for(String str : randomQueue){
             System.out.println(str);
         }
+    }
+
+    @Test
+    public void deleteKthQueue(){
+        GeneralizedQueue<Integer> gq = new GeneralizedQueue<Integer>();
+        for(int i = 0;i<8;i++){
+            gq.enqueue(i + 1);
+        }
+        assertEquals(8,gq.delete(1));
+        for(Integer i : gq) System.out.print(i + " ");
+        System.out.println();
+        assertEquals(7,gq.delete(1));
+        for(Integer i : gq) System.out.print(i + " ");
+        System.out.println();
+        assertEquals(4,gq.delete(3));
+        for(Integer i : gq) System.out.print(i + " ");
+        System.out.println();
+
+        GeneralizedQueue<Integer> g1 = new GeneralizedQueue<Integer>();
+        g1.enqueue(10);
+        System.out.println(g1.delete(20));
+        // System.out.println(g1.delete(1));
     }
 }

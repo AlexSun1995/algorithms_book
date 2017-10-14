@@ -3,7 +3,11 @@ import ch1_3_stack_queue_bags.mQueue;
 import java.util.Iterator;
 import java.util.Random;
 import static java.lang.Math.min;
-
+/**
+ * problems set 1.3.38
+ * Delete Kth element
+ * @param <Item>
+ */
 public class RandomQueue<Item> extends mQueue<Item> {
 
     private int N;

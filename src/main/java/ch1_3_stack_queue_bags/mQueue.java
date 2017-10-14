@@ -3,12 +3,12 @@ package ch1_3_stack_queue_bags;
 import java.util.Iterator;
 
 public class mQueue<Item> implements mCollection, Iterable<Item> {
-    private int N = 0;
-    private Node first = null;
+    protected int N = 0;
+    protected Node first = null;
 
-    class Node {
-        Item item;
-        Node next;
+    protected class Node {
+        public Item item;
+        public Node next;
 
         Node(Item item) {
             this.item = item;
@@ -55,7 +55,7 @@ public class mQueue<Item> implements mCollection, Iterable<Item> {
         return new mIterator();
     }
 
-    private class mIterator implements Iterator<Item> {
+    protected class mIterator implements Iterator<Item> {
         private Node current = first;
         public boolean hasNext() {
             return current!=null;
