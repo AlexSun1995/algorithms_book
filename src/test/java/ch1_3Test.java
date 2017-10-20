@@ -3,11 +3,8 @@ import ch1_3_stack_queue_bags.creative_problems.GeneralizedQueue;
 import ch1_3_stack_queue_bags.creative_problems.RandomQueue;
 import ch1_3_stack_queue_bags.mQueue;
 import ch1_3_stack_queue_bags.mStack;
-import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-
-import javax.swing.*;
 import java.util.Iterator;
 import java.util.LinkedList;
 
